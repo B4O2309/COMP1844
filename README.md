@@ -1,4 +1,4 @@
-# 🚇 Singapore MRT Network Analysis
+# Singapore MRT Network Analysis
 
 A Python application that models and visualises a section of the **Singapore Mass Rapid Transit (MRT)** network as a weighted graph, with interactive distance unit selection.
 
@@ -6,13 +6,13 @@ Built for **COMP1844 — Information Analysis and Visualisation** at the Univers
 
 ---
 
-## 📸 Preview
+## Preview
 
 <img width="1070" height="801" alt="image" src="https://github.com/user-attachments/assets/745e8067-4f84-4902-81b4-3ddf3031c61a" />
 
 ---
 
-## 📋 Features
+## Features
 
 - Visualises 24 MRT stations across **5 lines** as an interactive network graph
 - Displays **inter-station distances** as edge labels in either **kilometres or miles**
@@ -23,7 +23,7 @@ Built for **COMP1844 — Information Analysis and Visualisation** at the Univers
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 .
@@ -33,7 +33,7 @@ Built for **COMP1844 — Information Analysis and Visualisation** at the Univers
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 Python 3.8 or higher is recommended.
 
@@ -51,7 +51,7 @@ Python 3.8 or higher is recommended.
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 **1. Clone the repository**
 
@@ -65,7 +65,7 @@ pip install numpy pandas networkx matplotlib streamlit
 
 ---
 
-## ▶️ Running the App
+## Running the App
 
 ```bash
 streamlit run cw_streamlit.py
@@ -75,7 +75,7 @@ The app will open automatically in browser at `http://localhost:8501`.
 
 ---
 
-## 🗺️ Network Coverage
+## Network Coverage
 
 | Line | Colour | Stations |
 |---|---|---|
@@ -87,7 +87,7 @@ The app will open automatically in browser at `http://localhost:8501`.
 
 ---
 
-## 📊 Task 2 — Extracted Statistics
+## Task 2 — Extracted Statistics
 
 | Metric | km | miles |
 |---|---|---|
@@ -96,7 +96,7 @@ The app will open automatically in browser at `http://localhost:8501`.
 
 ---
 
-## 👤 Author
+## Author
 
 **Nguyen Hoang Gia Bao** — GCS230093  
 University of Greenwich — COMP1844 (2025–2026)

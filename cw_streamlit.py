@@ -16,65 +16,66 @@ def main():
 
     stations = {
         # North South Line
-        'Ang Mo Kio':    {'pos': ( 1.0, 11.1), 'type': 'normal'},
-        'Bishan':        {'pos': ( 1.0,  7.3), 'type': 'interchange'},
-        'Braddell':      {'pos': ( 1.0,  5.5), 'type': 'normal'},
-        'Toa Payoh':     {'pos': ( 1.0,  4.0), 'type': 'normal'},
-        'Novena':        {'pos': ( 1.0,  1.0), 'type': 'normal'},
+        'Ang Mo Kio':    {'pos': ( 1.00, 11.50), 'type': 'normal'},
+        'Bishan':        {'pos': ( 1.00,  8.05), 'type': 'interchange'},
+        'Braddell':      {'pos': ( 1.00,  6.25), 'type': 'normal'},
+        'Toa Payoh':     {'pos': ( 1.00,  4.90), 'type': 'normal'},
+        'Novena':        {'pos': ( 1.00,  1.75), 'type': 'normal'},
 
         # North East Line
-        'Hougang':       {'pos': ( 8.1, 10.4), 'type': 'normal'},
-        'Kovan':         {'pos': ( 6.6,  8.9), 'type': 'normal'},
-        'Serangoon':     {'pos': ( 5.0,  7.3), 'type': 'interchange'},
-        'Woodleigh':     {'pos': ( 3.9,  6.2), 'type': 'normal'},
-        'Potong Pasir':  {'pos': ( 2.8,  5.1), 'type': 'normal'},
+        'Hougang':       {'pos': ( 8.57, 11.07), 'type': 'normal'},
+        'Kovan':         {'pos': ( 7.09,  9.59), 'type': 'normal'},
+        'Serangoon':     {'pos': ( 5.50,  8.00), 'type': 'interchange'},
+        'Woodleigh':     {'pos': ( 4.33,  6.83), 'type': 'normal'},
+        'Potong Pasir':  {'pos': ( 3.38,  5.88), 'type': 'normal'},
 
-        'Lorong Chuan':  {'pos': ( 3.2,  7.6), 'type': 'normal'},
-        'Bartley':       {'pos': ( 7.0,  6.5), 'type': 'normal'},
-        'Tai Seng':      {'pos': ( 8.8,  5.6), 'type': 'normal'},
+        # Circle Line
+        'Lorong Chuan':  {'pos': ( 3.55,  8.02), 'type': 'normal'},
+        'Bartley':       {'pos': ( 7.30,  7.30), 'type': 'normal'},
+        'Tai Seng':      {'pos': ( 8.80,  5.90), 'type': 'normal'},
 
         # Downtown Line
-        'Kaki Bukit':    {'pos': (13.5,  5.76), 'type': 'normal'},
-        'Ubi':           {'pos': (12.0,  5.16), 'type': 'normal'},
-        'MacPherson':    {'pos': (10.35, 4.50), 'type': 'interchange'},
-        'Mattar':        {'pos': ( 8.1,  3.60), 'type': 'normal'},
-        'Geylang Bahru': {'pos': ( 6.0,  2.76), 'type': 'normal'},
+        'Kaki Bukit':    {'pos': (12.35,  5.28), 'type': 'normal'},
+        'Ubi':           {'pos': (10.90,  4.90), 'type': 'normal'},
+        'MacPherson':    {'pos': ( 9.30,  4.50), 'type': 'interchange'},
+        'Mattar':        {'pos': ( 7.05,  4.50), 'type': 'normal'},
+        'Geylang Bahru': {'pos': ( 5.55,  3.25), 'type': 'normal'},
 
         # East West Line
-        'Kembangan':     {'pos': (13.8,  3.82), 'type': 'normal'},
-        'Eunos':         {'pos': (12.15, 3.16), 'type': 'normal'},
-        'Paya Lebar':    {'pos': (10.5,  2.50), 'type': 'interchange'},
-        'Aljunied':      {'pos': ( 8.4,  1.66), 'type': 'normal'},
-        'Kallang':       {'pos': ( 6.3,  0.82), 'type': 'normal'},
-        'Dakota':        {'pos': (10.5,  0.50), 'type': 'normal'},
+        'Kembangan':     {'pos': (12.80,  4.18), 'type': 'normal'},
+        'Eunos':         {'pos': (11.30,  3.49), 'type': 'normal'},
+        'Paya Lebar':    {'pos': ( 9.80,  2.80), 'type': 'interchange'},
+        'Aljunied':      {'pos': ( 7.90,  1.92), 'type': 'normal'},
+        'Kallang':       {'pos': ( 6.00,  1.04), 'type': 'normal'},
+        'Dakota':        {'pos': ( 9.80,  0.85), 'type': 'normal'},
     }
 
     for node, attrs in stations.items():
         G.add_node(node, pos=attrs['pos'], type=attrs['type'])
 
     edges_data = [
-        ('Ang Mo Kio',   'Bishan',        'North South Line', '#d42e12', 2.5),
+        ('Ang Mo Kio',   'Bishan',        'North South Line', '#d42e12', 2.3),
         ('Bishan',       'Braddell',      'North South Line', '#d42e12', 1.2),
-        ('Braddell',     'Toa Payoh',     'North South Line', '#d42e12', 1.0),
-        ('Toa Payoh',    'Novena',        'North South Line', '#d42e12', 2.0),
+        ('Braddell',     'Toa Payoh',     'North South Line', '#d42e12', 0.9),
+        ('Toa Payoh',    'Novena',        'North South Line', '#d42e12', 2.1),
 
         ('Hougang',      'Kovan',         'North East Line',  '#9016b2', 1.4),
         ('Kovan',        'Serangoon',     'North East Line',  '#9016b2', 1.5),
-        ('Serangoon',    'Woodleigh',     'North East Line',  '#9016b2', 1.0),
-        ('Woodleigh',    'Potong Pasir',  'North East Line',  '#9016b2', 1.0),
+        ('Serangoon',    'Woodleigh',     'North East Line',  '#9016b2', 1.1),
+        ('Woodleigh',    'Potong Pasir',  'North East Line',  '#9016b2', 0.9),
 
-        ('Bishan',       'Lorong Chuan',  'Circle Line',      '#fd9a00', 1.5),
-        ('Lorong Chuan', 'Serangoon',     'Circle Line',      '#fd9a00', 1.2),
-        ('Serangoon',    'Bartley',       'Circle Line',      '#fd9a00', 1.4),
-        ('Bartley',      'Tai Seng',      'Circle Line',      '#fd9a00', 1.2),
+        ('Bishan',       'Lorong Chuan',  'Circle Line',      '#fd9a00', 1.7),
+        ('Lorong Chuan', 'Serangoon',     'Circle Line',      '#fd9a00', 1.3),
+        ('Serangoon',    'Bartley',       'Circle Line',      '#fd9a00', 1.3),
+        ('Bartley',      'Tai Seng',      'Circle Line',      '#fd9a00', 1.4),
         ('Tai Seng',     'MacPherson',    'Circle Line',      '#fd9a00', 1.0),
-        ('MacPherson',   'Paya Lebar',    'Circle Line',      '#fd9a00', 1.5),
+        ('MacPherson',   'Paya Lebar',    'Circle Line',      '#fd9a00', 1.2),
         ('Paya Lebar',   'Dakota',        'Circle Line',      '#fd9a00', 1.3),
 
         ('Kaki Bukit',   'Ubi',           'Downtown Line',    '#005b9f', 1.0),
         ('Ubi',          'MacPherson',    'Downtown Line',    '#005b9f', 1.1),
         ('MacPherson',   'Mattar',        'Downtown Line',    '#005b9f', 1.5),
-        ('Mattar',       'Geylang Bahru', 'Downtown Line',    '#005b9f', 1.4),
+        ('Mattar',       'Geylang Bahru', 'Downtown Line',    '#005b9f', 1.3),
 
         ('Kembangan',    'Eunos',         'East West Line',   '#009645', 1.1),
         ('Eunos',        'Paya Lebar',    'East West Line',   '#009645', 1.1),
@@ -110,7 +111,7 @@ def main():
         x_off, y_off = 0.2, 0.2
 
         if k in ['Ang Mo Kio', 'Bishan', 'Braddell', 'Toa Payoh', 'Novena']:
-            x_off, y_off = -0.9, 0.0
+            x_off, y_off = -0.6, 0.0
 
         elif k in ['Serangoon']:
             x_off, y_off = 0.7, 0.1
@@ -131,11 +132,11 @@ def main():
         elif k == 'Kaki Bukit':
             x_off, y_off = -0.4, 0.3
         elif k == 'Ubi':
-            x_off, y_off = -0.3, 0.3
+            x_off, y_off = -0.3, 0.2
         elif k == 'MacPherson':
-            x_off, y_off = 0.0, 0.50
+            x_off, y_off = -0.6, 0.3
         elif k == 'Mattar':
-            x_off, y_off = -0.5, 0.3
+            x_off, y_off = -0.3, 0.2
         elif k == 'Geylang Bahru':
             x_off, y_off = -0.55, 0.3
         elif k == 'Paya Lebar':
